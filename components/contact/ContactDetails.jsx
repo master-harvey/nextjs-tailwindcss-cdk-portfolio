@@ -1,6 +1,12 @@
 import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FaUserAstronaut } from 'react-icons/fa'
 
 const contacts = [
+	{
+		id: 0,
+		name: 'Ian Harvey',
+		icon: <FaUserAstronaut />,
+	},
 	{
 		id: 1,
 		name: 'Denver, Colorado',
@@ -13,7 +19,7 @@ const contacts = [
 	},
 	{
 		id: 3,
-		name: '(480)478-7042 (call/text)',
+		name: '(480)378-7042 (call/text)',
 		icon: <FiPhone />,
 	},
 ];
@@ -37,6 +43,7 @@ function ContactDetails() {
 						</li>
 					))}
 				</ul>
+				<p className="text-lg text-ternary-dark dark:text-ternary-light">Commercial AI integration, custom software development, and reliable tech support tailored to your team&apos;s needs.</p>
 			</div>
 		</div>
 	);

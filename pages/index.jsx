@@ -3,6 +3,7 @@ import PagesMetaHead from '../components/PagesMetaHead';
 import ProjectsGrid from '../components/projects/ProjectsGrid';
 import Button from '../components/reusable/Button';
 import AppBanner from '../components/shared/AppBanner';
+import AIMLBanner from '../components/AIMLBanner';
 
 export default function Home() {
 	return (
@@ -10,6 +11,8 @@ export default function Home() {
 			<PagesMetaHead title="Home" />
 
 			<AppBanner />
+
+			<AIMLBanner />
 
 			<ProjectsGrid />
 
