@@ -34,9 +34,8 @@ export class CdkStack extends Stack {
       authType: lambda.FunctionUrlAuthType.NONE,
       cors: {
         allowedMethods: [lambda.HttpMethod.PUT], allowedHeaders: ["content-type"],
-        allowedOrigins: [`https://${this.node.tryGetContext('URL')}`]
+        allowedOrigins: [`https://${this.node.tryGetContext('URL')}`,`https://www.${this.node.tryGetContext('URL')}`]
       }
     })
-
   }
 }
