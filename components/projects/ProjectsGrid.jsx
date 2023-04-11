@@ -101,8 +101,6 @@ function ProjectsGrid() {
 							aria-label="Name"
 						/>
 					</div>
-
-					<ProjectsFilter setSelectProject={setSelectProject} />
 				</div>
 			</div>
 

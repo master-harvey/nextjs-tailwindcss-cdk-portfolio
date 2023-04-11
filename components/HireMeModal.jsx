@@ -1,15 +1,38 @@
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
+import { useState } from 'react';
 
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'Application Development',
+	'Robotic Process Automation',
+	'Software Automation',
+	'Industrial Automation',
+	'Parametric Assembly & Part Design',
+	'Abstract Model Design',
+	'3d print, Laser, or CNC',
+	'Cloud tech and Virtualization'
 ];
 
 function HireMeModal({ onClose, onRequest }) {
+	const [error, setError] = useState(false)
+	const [success, setSuccess] = useState(false)
+	const [loading, setLoading] = useState(false)
+
+	function submitForm(e) {
+		e.preventDefault()
+		setSuccess(false); setError(false); setLoading(true);
+		fetch("https://446mz2xyrcz35ret4r5i2rtkee0esajl.lambda-url.us-east-2.on.aws/", {
+			method: "PUT", headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				name: document.getElementById("name").value,
+				email: document.getElementById("email").value,
+				subject: document.getElementById("subject").value,
+				message: document.getElementById("message").value
+			}),
+		}).catch(() => setError(true)).then(() => setSuccess(true)).finally(() => setLoading(false))
+	}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -35,11 +58,10 @@ function HireMeModal({ onClose, onRequest }) {
 								<FiX className="text-3xl" />
 							</button>
 						</div>
+						<p className="text-center">{loading && "Sending..."}{error && "Error... I promise I'm not usually like this :|"}{success && "You'll hear back from me soon!"}</p>
 						<div className="modal-body p-5 w-full h-full">
 							<form
-								onSubmit={(e) => {
-									e.preventDefault();
-								}}
+								onSubmit={(e)=>submitForm(e)}
 								className="max-w-xl m-4 text-left"
 							>
 								<div className="">
@@ -98,7 +120,6 @@ function HireMeModal({ onClose, onRequest }) {
 
 								<div className="mt-6 pb-4 sm:pb-1">
 									<span
-										onClick={onRequest}
 										type="submit"
 										className="px-4
 											sm:px-6

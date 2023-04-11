@@ -1,18 +1,35 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
+import { useState } from 'react';
 
 function ContactForm() {
+	const [error, setError] = useState(false)
+	const [success, setSuccess] = useState(false)
+	const [loading, setLoading] = useState(false)
+
+	function submitForm(e) {
+		e.preventDefault()
+		setSuccess(false); setError(false); setLoading(true);
+		fetch("https://446mz2xyrcz35ret4r5i2rtkee0esajl.lambda-url.us-east-2.on.aws/", {
+			method: "PUT", headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				name: document.getElementById("name").value,
+				email: document.getElementById("email").value,
+				subject: document.getElementById("subject").value,
+				message: document.getElementById("message").value
+			}),
+		}).catch(() => setError(true)).then(() => setSuccess(true)).finally(() => setLoading(false))
+	}
+
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					onSubmit={(e) => submitForm(e)}
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
-						Contact Form
+						Contact Form  {loading && "- Sending..."}{error && "- Error"}{success && "- Thank You!"}
 					</p>
 
 					<FormInput
@@ -69,6 +86,7 @@ function ContactForm() {
 							/>
 						</span>
 					</div>
+					<p className="mt-2">{error && "How embarassing :|"}{success && "You'll hear back from me soon!"}</p>
 				</form>
 			</div>
 		</div>
