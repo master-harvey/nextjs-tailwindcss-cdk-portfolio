@@ -10,13 +10,22 @@ function AppFooterCopyright() {
 				>
 					Next.js & Tailwind CSS Portfolio
 				</a>
-				.{' '}
+				.{' Made By '}
 				<a
 					href="https://stoman.me"
 					target="__blank"
 					className="text-secondary-dark dark:text-secondary-light font-medium uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
 				>
 					Stoman
+				</a>
+				&nbsp;
+				and adapted by
+				<a
+					href="https://mastersautomation.tech/"
+					target="__blank"
+					className="text-secondary-dark dark:text-secondary-light font-medium uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
+				>
+					&lt;&nbsp;IAN HARVEY&nbsp;&gt;
 				</a>
 			</div>
 		</div>
