@@ -4,13 +4,11 @@ from json import loads
 
 
 def handler(event, context):
-    print("EVENT:", event, ":EVENT")
-    client = boto3.client('sns', region_name='us-east-2')
+    client = boto3.client('sns')
     try:
         event = loads(event)['body']
     except:
         event = loads(event['body'])
-    print("Event Body:", event)
 
     response = client.publish(
         TopicArn=environ['TOPIC'],
