@@ -67,7 +67,7 @@ function AppBanner() {
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
-				<img
+				<Image
 					layout="responsive"
 					src={
 						activeTheme === 'dark'
