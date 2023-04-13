@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
+import Link from 'next/link';
 import RelatedProjects from '../../components/projects/RelatedProjects';
 
 function ProjectSingle(props) {
@@ -59,29 +60,19 @@ function ProjectSingle(props) {
 						</p>
 						<ul className="leading-loose">
 							{props.project.ProjectInfo.CompanyInfo.map(
-								(info) => {
-									return (
-										<li
-											className="font-general-regular text-ternary-dark dark:text-ternary-light"
-											key={info.id}
-										>
-											<span>{info.title}: </span>
-											<br />
-											<a
-												href={info.href}
-												className={
-													info.title === 'Website' ||
-													info.title === 'Phone'
-														? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-														: ''
-												}
-												aria-label="Project Website and Phone"
-											>
-												{info.details}
-											</a>
-										</li>
-									);
-								}
+								(info) => <li className="font-general-regular text-ternary-dark dark:text-ternary-light" key={info.id}>
+									<span>{info.title}: </span>
+									<br />
+									<a
+										href={info.href} target="_blank" rel="noreferrer" aria-label="Project Website and Phone"
+										className={
+											info.href
+												? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300' : ''
+										}
+									>
+										{info.details}
+									</a>
+								</li>
 							)}
 						</ul>
 					</div>
@@ -110,10 +101,10 @@ function ProjectSingle(props) {
 
 					{/* Single project social sharing */}
 					<div>
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+						{/* <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 							{props.project.ProjectInfo.SocialSharingHeading}
 						</p>
-						{/* <div className="flex items-center gap-3 mt-5">
+						<div className="flex items-center gap-3 mt-5">
 							{props.project.ProjectInfo.SocialSharing.map(
 								(social, index) => {
 									<Link

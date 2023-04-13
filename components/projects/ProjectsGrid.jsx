@@ -20,9 +20,7 @@ function ProjectsGrid(props) {
 	// 	return result;
 	// });
 
-	const selectProjectsByFeatured = projectsData.filter((item) => {
-		return item.feature
-	});
+	const selectProjectsByFeatured = projectsData.filter((item) => { return item.feature ?? false });
 
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">

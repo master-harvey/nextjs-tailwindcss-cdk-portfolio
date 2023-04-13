@@ -1,11 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import {
-	FiFacebook,
-	FiInstagram,
-	FiLinkedin,
-	FiTwitter,
-	FiYoutube,
-	FiGlobe
+	FiLinkedin, FiGlobe
 } from 'react-icons/fi';
 
 const categories = {
@@ -62,19 +57,19 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Sure Clean',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://surecleancorp.com/'
 				},
 				{
 					id: uuidv4(),
 					title: 'Master\'s Automation',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://mastersautomation.tech/'
 				},
 				{
 					id: uuidv4(),
 					title: 'VIP Vegas Travel (retired)',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://vegas.mastersautomation.tech/'
 				},
 			],
@@ -172,19 +167,19 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'UiPath',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://www.uipath.com/'
 				},
 				{
 					id: uuidv4(),
 					title: 'Automation Anywhere',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://www.automationanywhere.com/'
 				}
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Use Wordpress or a similar "Website in a box" software to quickly deploy a polished business presence to the internet.',
+				'Create programs that simulate human interaction in a desktop environment to automate even the most uncooperative programs in your workflow.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -301,19 +296,19 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Automation Keypad Configurator',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://keypad.mastersautomation.tech/',
 				},
 				{
 					id: uuidv4(),
 					title: 'Ez-RRule-Generator',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://github.com/master-harvey/ez-rrule-generator',
 				},
 				{
 					id: uuidv4(),
 					title: 'Ferry (Coming Soon)',
-					details: <FiGlobe />,
+					details: "Homepage",
 					href: 'https://ferry.mastersautomation.tech/',
 				}
 			],
@@ -503,30 +498,30 @@ export const projectsData = [
 	},
 	{
 		id: 5,
-		title: 'AI/ML Integrations',
-		url: 'ai-ml-integrations',
+		title: 'Language Model Integrations',
+		url: 'lm-integrations',
 		category: categories.ai,
 		img: '/images/web-project-2.jpg',
 		feature: true,
 		ProjectHeader: {
-			title: 'Web Scraping',
+			title: 'Language Model Integrations',
 			publishDate: 'Jul 26, 2021',
 			tags: 'AI/ML Integrations',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'AI/ML Integrations',
+				title: 'Language Model Integrations',
 				img: '/images/ui-project-1.jpg',
 			},
 			{
 				id: uuidv4(),
-				title: 'AI/ML Integrations',
+				title: 'Language Model Integrations',
 				img: '/images/web-project-2.jpg',
 			},
 			{
 				id: uuidv4(),
-				title: 'AI/ML Integrations',
+				title: 'Language Model Integrations',
 				img: '/images/mobile-project-2.jpg',
 			},
 		],
@@ -541,16 +536,16 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Services',
-					details: 'Commercial AI/ML Integrations',
+					details: 'Language Model Integrations',
 				}
 			],
 			ObjectivesHeading: 'Objective',
-			ObjectivesDetails: 'Leverage the worlds latest and most advanced tools to streamline and accelerate business production',
+			ObjectivesDetails: 'Use AI language models to generate code, rewrite contracts, write marketing copy, and much more.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
 					techs: [
-						'ChatGPT','DallE-2','MidJourney'
+						'ChatGPT'
 					],
 				},
 			],
@@ -619,9 +614,9 @@ export const projectsData = [
 		category: categories.cad,
 		img: '/images/web-project-2.jpg',
 		ProjectHeader: {
-			title: 'Web Scraping',
+			title: 'Part & Assembly CAD',
 			publishDate: 'Jul 26, 2021',
-			tags: 'AI/ML Integrations',
+			tags: 'CAD, CAM & CNC',
 		},
 		ProjectImages: [
 			{
@@ -881,6 +876,106 @@ export const projectsData = [
 					title: 'Tools & Technologies',
 					techs: [
 						'AWS', 'Google Cloud'
+					],
+				},
+			],
+			ProjectDetailsHeading: 'About',
+			ProjectDetails: [
+				{
+					id: uuidv4(),
+					details:
+						'As a software developer, I have extensive experience in configuring code for cloud services, utilizing cloud infrastructure services to scale applications and reduce operational costs. However, for longer-running jobs, I also have experience hosting Linux on-premises.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Running services on-premises can provide greater control and flexibility, allowing developers to fine-tune configurations and optimize performance. While managing and maintaining an on-premises server can be time-consuming and requires technical expertise, the benefits of having 24/7 computing services in house and being able to host longer running processes that wouldn\'t qualify for a cloud platform\'s free tier is invaluable.',
+				},
+			],
+			SocialSharingHeading: 'Share This',
+			SocialSharing: [
+				// {
+				// 	id: uuidv4(),
+				// 	name: 'Twitter',
+				// 	icon: <FiTwitter />,
+				// 	url: 'https://twitter.com/realstoman',
+				// },
+				// {
+				// 	id: uuidv4(),
+				// 	name: 'Instagram',
+				// 	icon: <FiInstagram />,
+				// 	url: 'https://instagram.com/realstoman',
+				// },
+				// {
+				// 	id: uuidv4(),
+				// 	name: 'Facebook',
+				// 	icon: <FiFacebook />,
+				// 	url: 'https://facebook.com/',
+				// },
+				{
+					id: uuidv4(),
+					name: 'LinkedIn',
+					icon: <FiLinkedin />,
+					url: 'https://linkedin.com/',
+				},
+				// {
+				// 	id: uuidv4(),
+				// 	name: 'Youtube',
+				// 	icon: <FiYoutube />,
+				// 	url: 'https://www.youtube.com/c/StomanStudio',
+				// },
+			],
+		},
+	},
+	{
+		id: 9,
+		title: 'Image Generator Integration',
+		url: 'image-generator-integration',
+		category: categories.server,
+		img: '/images/web-project-2.jpg',
+		ProjectHeader: {
+			title: 'Image Generator Integration',
+			publishDate: 'Jul 26, 2021',
+			tags: 'AI/ML Integrations',
+		},
+		ProjectImages: [
+			{
+				id: uuidv4(),
+				title: 'Cloud Configuration',
+				img: '/images/ui-project-1.jpg',
+			},
+			{
+				id: uuidv4(),
+				title: 'Cloud Configuration',
+				img: '/images/web-project-2.jpg',
+			},
+			{
+				id: uuidv4(),
+				title: 'Cloud Configuration',
+				img: '/images/mobile-project-2.jpg',
+			},
+		],
+		ProjectInfo: {
+			ClientHeading: 'Details',
+			CompanyInfo: [
+				// {
+				// 	id: uuidv4(),
+				// 	title: 'Name',
+				// 	details: 'Company Ltd',
+				// },
+				{
+					id: uuidv4(),
+					title: 'Services',
+					details: 'AI Image Generation',
+				}
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails: 'Paint with your keystrokes by utilizing stable diffusion models to create breathtaking virtual art from a text prompt',
+			Technologies: [
+				{
+					title: 'Tools & Technologies',
+					techs: [
+						'DallE-2','MidJourney'
 					],
 				},
 			],
