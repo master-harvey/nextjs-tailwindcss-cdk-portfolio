@@ -66,8 +66,9 @@ function ProjectSingle(props) {
 											key={info.id}
 										>
 											<span>{info.title}: </span>
+											<br />
 											<a
-												href="https://stoman.me"
+												href={info.href}
 												className={
 													info.title === 'Website' ||
 													info.title === 'Phone'
@@ -150,8 +151,6 @@ function ProjectSingle(props) {
 					})}
 				</div>
 			</div>
-
-			<RelatedProjects />
 		</div>
 	);
 }
