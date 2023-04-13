@@ -4,14 +4,12 @@ import Button from './reusable/Button';
 import { useState } from 'react';
 
 const selectOptions = [
-	'Application Development',
+	'AI/ML Service Integration & Training',
+	'Web & App Development',
+	'Cloud & Virtual Servers',
 	'Robotic Process Automation',
-	'Software Automation',
-	'Industrial Automation',
-	'Parametric Assembly & Part Design',
-	'Abstract Model Design',
-	'3d print, Laser, or CNC',
-	'Cloud tech and Virtualization'
+	'CAD, CAM & CNC',
+	'3D Sculpting'
 ];
 
 function HireMeModal({ onClose, onRequest }) {
@@ -49,7 +47,7 @@ function HireMeModal({ onClose, onRequest }) {
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
 						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
 							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
-								What project are you looking for?
+								What can I help you achieve?
 							</h5>
 							<button
 								onClick={onClose}

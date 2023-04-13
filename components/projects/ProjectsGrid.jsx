@@ -4,7 +4,7 @@ import ProjectSingle from './ProjectSingle';
 import { projectsData } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
 
-function ProjectsGrid() {
+function ProjectsGrid(props) {
 	const [searchProject, setSearchProject] = useState();
 	const [selectProject, setSelectProject] = useState();
 
@@ -20,10 +20,8 @@ function ProjectsGrid() {
 	// 	return result;
 	// });
 
-	const selectProjectsByCategory = projectsData.filter((item) => {
-		let category =
-			item.category.charAt(0).toUpperCase() + item.category.slice(1);
-		return category.includes(selectProject);
+	const selectProjectsByFeatured = projectsData.filter((item) => {
+		return item.feature
 	});
 
 	return (
@@ -50,8 +48,8 @@ function ProjectsGrid() {
 			</div>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-				{selectProject
-					? selectProjectsByCategory.map((project, index) => {
+				{props.featured
+					? selectProjectsByFeatured.map((project, index) => {
 						return <ProjectSingle key={index} {...project} />;
 					})
 					: projectsData.map((project, index) => (
