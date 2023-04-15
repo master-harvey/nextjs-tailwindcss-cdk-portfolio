@@ -58,7 +58,7 @@ function ProjectSingle(props) {
 						<p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
 							{props.project.ProjectInfo.ClientHeading}
 						</p>
-						<ul className="leading-loose">
+						<ul className="leading-loose space-y-4">
 							{props.project.ProjectInfo.CompanyInfo.map(
 								(info) => <li className="font-general-regular text-ternary-dark dark:text-ternary-light" key={info.id}>
 									<span>{info.title}: </span>
