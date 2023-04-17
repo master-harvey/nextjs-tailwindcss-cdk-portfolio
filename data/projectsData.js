@@ -74,12 +74,12 @@ export const projectsData = [
 				}
 			],
 			ObjectivesHeading: 'Objective',
-			ObjectivesDetails: 'Paint with your keystrokes by utilizing stable diffusion models to create breathtaking virtual art from a text prompt',
+			ObjectivesDetails: 'Paint with your keystrokes by utilizing advanced machine learning models to create breathtaking virtual art from a text prompt',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
 					techs: [
-						'DallE-2', 'MidJourney'
+						'DallE-2', 'MidJourney', "Stable Diffusion"
 					],
 				},
 			],
@@ -88,12 +88,17 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'As a software developer, I have extensive experience in configuring code for cloud services, utilizing cloud infrastructure services to scale applications and reduce operational costs. However, for longer-running jobs, I also have experience hosting Linux on-premises.',
+						'As a versatile software developer, I excel in integrating cutting-edge image generator software such as Stable Diffusion, DALL-E 2, and Midjourney into various workflows to meet the creative demands of diverse projects. My expertise in these tools, combined with a deep understanding of the underlying AI algorithms, enables me to create custom solutions that leverage the full potential of these platforms.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Running services on-premises can provide greater control and flexibility, allowing developers to fine-tune configurations and optimize performance. While managing and maintaining an on-premises server can be time-consuming and requires technical expertise, the benefits of having 24/7 computing services in house and being able to host longer running processes that wouldn\'t qualify for a cloud platform\'s free tier is invaluable.',
+						'Additionally, I provide comprehensive training sessions for individuals and teams on how best to use these tools, ensuring that they can maximize their productivity while minimizing the learning curve. My training programs are tailored to cater to different skill levels, from novices to experienced professionals, and cover essential topics such as fine-tuning models, generating high-quality images, and troubleshooting common issues.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'By integrating these powerful image generators into your workflow and receiving hands-on training I can help you unlock new creative possibilities, streamline content creation, and stay ahead of the competition in the rapidly evolving landscape of AI-assisted design. Let me show you how to get AI to do your heavy lifting.',
 				},
 			],
 			SocialSharingHeading: 'Share This',
