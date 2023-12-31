@@ -16,12 +16,7 @@ const contacts = [
 		id: 2,
 		name: 'info@mastersautomation.tech',
 		icon: <FiMail />,
-	},
-	{
-		id: 3,
-		name: '(480)378-7042 (call/text)',
-		icon: <FiPhone />,
-	},
+	}
 ];
 
 function ContactDetails() {
