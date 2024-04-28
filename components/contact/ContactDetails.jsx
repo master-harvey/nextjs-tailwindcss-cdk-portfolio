@@ -1,4 +1,4 @@
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiMapPin, FiMail } from 'react-icons/fi';
 import { FaUserAstronaut } from 'react-icons/fa'
 
 const contacts = [

@@ -4,12 +4,14 @@ import Button from './reusable/Button';
 import { useState } from 'react';
 
 const selectOptions = [
+	'Service',
 	'AI/ML Service Integration & Training',
 	'Web & App Development',
 	'Cloud & Virtual Servers',
 	'Robotic Process Automation',
 	'CAD, CAM & CNC',
-	'3D Sculpting'
+	'3D Sculpting',
+	'Other'
 ];
 
 function HireMeModal({ onClose, onRequest }) {
@@ -134,20 +136,6 @@ function HireMeModal({ onClose, onRequest }) {
 									</span>
 								</div>
 							</form>
-						</div>
-						<div className="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right">
-							<span
-								onClick={onClose}
-								type="button"
-								className="px-4
-									sm:px-6
-									py-2 bg-gray-600 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light
-									rounded-md
-									focus:ring-1 focus:ring-indigo-900 duration-500"
-								aria-label="Close Modal"
-							>
-								<Button title="Close" />
-							</span>
 						</div>
 					</div>
 				</div>
