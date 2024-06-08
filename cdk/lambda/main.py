@@ -2,9 +2,9 @@ import boto3
 from os import environ
 from json import loads
 
+client = boto3.client('sns')
 
 def handler(event, context):
-    client = boto3.client('sns')
     try:
         event = loads(event)['body']
     except:
