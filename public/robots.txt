@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /cdk/
+
+Sitemap: https://ianharvey.pro/sitemap.xml

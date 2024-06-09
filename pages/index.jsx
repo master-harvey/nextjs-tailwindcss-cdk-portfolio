@@ -8,7 +8,7 @@ import AIMLBanner from '../components/AIMLBanner';
 export default function Home() {
 	return (
 		<div className="container mx-auto">
-			<PagesMetaHead title="Home" />
+			<PagesMetaHead title="Software Automation Professional" />
 
 			<AppBanner />
 
