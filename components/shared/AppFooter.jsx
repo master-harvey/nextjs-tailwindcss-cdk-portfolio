@@ -19,7 +19,7 @@ const socialLinks = [
 	{
 		id: 3,
 		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/iharveycad/',
+		url: 'https://www.linkedin.com/in/iharveyautomation/',
 	}
 ];
 
